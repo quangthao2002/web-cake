@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản Phẩm</title>
+    <link rel="stylesheet" href="/assets/style/main.css" />
+    <link rel="stylesheet" href="/assets/style/style.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/font/themify-icons-font/themify-icons/themify-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      .section-title {
+        font-family: "Playfair Display", serif;
+        font-size: 32px;
+        color: #41220a; /* nâu đậm */
+        text-align: center;
+        margin-bottom: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+
+      .section-subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        color: #7a5133; /* nâu caramel */
+        text-align: center;
+        margin-bottom: 24px;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="header">
+      <a href="/index.html"
+        ><img src="/assets/img/Logo.png" class="img-logo" alt=""
+      /></a>
+      <div class="search-box">
+        <input type="text" placeholder="Tìm bánh ngọt..." />
+        <button>Tìm</button>
+      </div>
+      <div>
+        <ul class="navbar">
+          <li><a class="nav-item" href="index.html">Trang chủ</a></li>
+          <li>
+            <a class="nav-item active" href=" listProduct.html">Sản phẩm</a>
+          </li>
+          <li><a class="nav-item" href="/news.html">Tin tức</a></li>
+
+          <li class="header-user-icon">
+            <a href="/login.html" class="header-user-link">
+              <i class="fa-regular fa-user"></i>
+              <span>Tài khoản</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="features">
+      <h2 class="section-title">Sản phẩm của chúng tôi</h2>
+      <p class="section-subtitle">
+        Từ Tiệm Bánh VT – Gửi trọn yêu thương qua từng chiếc bánh
+      </p>
+      <div class="grid__row listProduct">
+        <!-- <div class="grid__column-4">
+          <a href="" data-goto="" class="home-product">
+            <div
+              class="img-item"
+              style="
+                background-image: url(/assets/img/C352197012___F551248__1__thumb.jpg);
+                width: 100%;
+              "
+            ></div>
+
+            <div class="home-product-info">
+              <span>Quần ống đứng cá kẹp sườn trang trí</span>
+              <h5>380.000đ</h5>
+              <div class="star">
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="grid__column-4">
+          <a href="" class="home-product">
+            <div
+              class="img-item"
+              style="
+                background-image: url(/assets/img/C352198012___F551265__1__thumb.jpg);
+              "
+            ></div>
+
+            <div class="home-product-info">
+              <span
+                >Quần dáng baggy nhỏ xếp ly thân trước cạp đính trang trí</span
+              >
+              <h5>360.000đ</h5>
+              <div class="star">
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="grid__column-4">
+          <a href="" class="home-product">
+            <div
+              class="img-item"
+              style="
+                background-image: url(/assets/img/F552002071___F352155071__1__thumb.jpg);
+              "
+            ></div>
+
+            <div class="home-product-info">
+              <span>Quần dáng suông rộng họa tiết cây nhiệt đới</span>
+              <h5>440.000đ</h5>
+              <div class="star">
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="grid__column-4">
+          <a href="" class="home-product">
+            <div
+              class="img-item"
+              style="
+                background-image: url(/assets/img/F552188081___F352305011__1__thumb.jpg);
+              "
+            ></div>
+
+            <div class="home-product-info">
+              <span>Quần suông dập nhăn cạp đính cúc trang trí</span>
+              <h5>360.000đ</h5>
+              <div class="star">
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="grid__column-4">
+          <a href="" class="home-product">
+            <div
+              class="img-item"
+              style="background-image: url(/assets/img//product5.jpg)"
+            ></div>
+
+            <div class="home-product-info">
+              <span>Chân váy bò dáng đuôi cá dài qua gối</span>
+              <h5>480.000đ</h5>
+              <div class="star">
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="grid__column-4">
+          <a href="" class="home-product">
+            <div
+              class="img-item"
+              style="background-image: url(/assets/img/product6.jpg)"
+            ></div>
+
+            <div class="home-product-info">
+              <span>Chân bò dáng A in chữ trang trí thân trước </span>
+              <h5>480.000đ</h5>
+              <div class="star">
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="grid__column-4">
+          <a href="" class="home-product">
+            <div
+              class="img-item"
+              style="background-image: url(/assets/img/product7.jpg)"
+            ></div>
+
+            <div class="home-product-info">
+              <span>Chân váy dáng xòe xếp ly xung quang cạp</span>
+              <h5>360.000đ</h5>
+              <div class="star">
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="grid__column-4">
+          <a href="" class="home-product">
+            <div
+              class="img-item"
+              style="background-image: url(/assets/img/product8.jpg)"
+            ></div>
+
+            <div class="home-product-info">
+              <span>Quần suông dập nhăn cạp đính cúc trang trí</span>
+              <h5>440.000đ</h5>
+              <div class="star">
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+                <i class="ti-star"></i>
+              </div>
+            </div>
+          </a>
+        </div> -->
+      </div>
+    </section>
+    <section id="banner">
+      <h2>Tìm hiểu thêm về chúng tôi</h2>
+      <h4>Giảm giá 20% cho thành viên</h4>
+      <a href="">Khám phá về chúng tôi</a>
+    </section>
+
+    <section id="sm-banner">
+      <div class="grid__row">
+        <div class="grid__column-6"></div>
+      </div>
+    </section>
+    <section id="footer">
+      <div class="site-map">
+        <a href="./sitemap.html"> Site map </a>
+      </div>
+      <div class="container-footer">
+        <div class="container-footer-section1">
+          <div class="grid__row">
+            <div class="grid__column-3">
+              <h3>Đăng kí nhận thông tin</h3>
+              <p>
+                Đăng ký ngay để là người đầu tiên cập nhật sớm nhất những tin
+                tức thời trang, những bộ sưu tập cũng như ưu đãi hấp dẫn từ NT.
+              </p>
+            </div>
+            <div class="grid__column-3">
+              <div class="search-box">
+                <input type="text" placeholder="Nhập email đăng ký" />
+                <button>Tìm</button>
+              </div>
+            </div>
+            <div class="grid__column-3">
+              <h3 class="footer-txt-connect">Kết nối với chúng tôi</h3>
+              <div class="footer-icon">
+                <a href=""><i class="ti-instagram icon-instagram"></i></a>
+                <a href=""><i class="ti-facebook icon-fb"></i></a>
+                <a href=""><i class="ti-youtube icon-ytb"></i></a>
+                <a href=""><i class="ti-twitter-alt icon-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-footer-section2">
+          <div class="grid__row">
+            <div class="grid__column-4">
+              <ul>
+                <li class="nav-footer"><h2>TỔNG ĐÀI GỌI HỖ TRỢ</h2></li>
+                <li class="nav-footer">
+                  <p>
+                    “Đặt sự hài lòng của khách hàng là ưu tiên số 1 trong mọi
+                    suy nghĩ hành động của mình” là sứ mệnh, là triết lý, chiến
+                    lược.. luôn cùng FIONA tiến bước
+                  </p>
+                </li>
+                <li class="nav-footer"><p>Mua hàng: 0981122811</p></li>
+                <li class="nav-footer">
+                  <p>Góp ý, khiếu nại: 0942 844 222</p>
+                </li>
+              </ul>
+            </div>
+            <div class="grid__column-4">
+              <ul>
+                <li class="nav-footer"><h2>Về Chúng Tôi:</h2></li>
+                <li class="nav-footer"><p>Liên hệ:0389757147</p></li>
+                <li class="nav-footer">
+                  <p>Trường Đại Học Công Nghiệp TPHCM</p>
+                </li>
+              </ul>
+            </div>
+            <div class="grid__column-4">
+              <ul>
+                <li class="nav-footer"><h2>Hỗ Trợ Khách Hàng</h2></li>
+                <li class="nav-footer"><p>Hướng dẫn mua hàng</p></li>
+                <li class="nav-footer"><p>Chính sách bảo hành</p></li>
+                <li class="nav-footer"><p>Báo Lỗi!</p></li>
+              </ul>
+            </div>
+            <div class="grid__column-4">
+              <ul>
+                <li class="nav-footer"><h2>Công ty Cổ Phần VT Việt Nam</h2></li>
+                <li class="nav-footer">
+                  <p>
+                    Địa Chỉ:12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, Thành phố Hồ
+                    Chí Minh
+                  </p>
+                </li>
+                <li class="nav-footer"><p>Email:anhngole1105@gmail.com</p></li>
+                <li class="nav-footer"><p>Liên hệ.</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-txt-copy">
+          <p class="">Copyright by Tran Quoc Thai and Tran Van Anh Viet</p>
+        </div>
+      </div>
+    </section>
+    <script src="./assets/js/loadProduct.js"></script>
+  </body>
+</html>

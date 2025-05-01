@@ -1,0 +1,23 @@
+.body{
+    background-color: #f3f3f3;
+}
+ul a{
+    font-size: 20px;
+    text-decoration: none;
+    padding-left: 10px;
+    margin-top: 10px;
+    color: gray;
+}
+.title-sidemap{
+    margin-top: 30px;
+    border-bottom: 2px solid gray;
+    text-align: center;
+   width: 100%;
+   color: brown;
+   font-size: 18px;
+   font-weight: 500;
+   margin-bottom: 20px;
+}
+ul a:hover{
+    color: black;
+}

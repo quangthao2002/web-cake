@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <link rel="stylesheet" href="/assets/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/style/main.css">
+    <link rel="stylesheet" href="/assets/style/style.css">
+    <link rel="stylesheet" href="/assets/style/payment.css">
+</head>
+<link rel="stylesheet" href="/assets/font/fontawesome-free-6.1.1-web/css/all.min.css">
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+<body>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+   .payment{
+     width: 90%;
+     font-family: 'Montserrat', sans-serif;
+   }
+   
+  
+  
+    </style>
+
+<section id="header">
+  <a href="/index.html"
+    ><img src="/assets/img/Logo.png" class="img-logo" alt=""
+  /></a>
+  <div class="search-box">
+    <input type="text" placeholder="Tìm bánh ngọt..." />
+    <button>Tìm</button>
+  </div>
+
+  <div>
+    <ul class="navbar">
+      <li><a class="nav-item active" href="index.html">Trang chủ</a></li>
+      <li><a class="nav-item" href=" listProduct.html">Sản phẩm</a></li>
+      <li><a class="nav-item" href="/news.html">Tin tức</a></li>
+
+      <li class="header-user-icon">
+        <a href="/login.html" class="header-user-link">
+          <i class="fa-regular fa-user"></i>
+          <span>Tài khoản</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+<!--------------------payment--------------------------->
+<section class="payment">
+  <div class="row">
+        <div class="col-8">
+          <div class="payment-left">
+            <div class="payment-cart-top">
+              <div class="cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                  </div>
+                  <div class="cart">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div class="cart">
+                    <i class="fa-solid fa-money-check"></i>
+                  </div>
+            </div>
+            <div class="row">
+                <div class="col-7">
+                      <div class="delivery_address">
+                        <h3>Địa chỉ giao hàng</h3>
+                      </div>
+                      <div class="buttons">
+                        <a href="" class="btn btn-lg btn-dark btn-outline-light">ĐĂNG NHẬP</a>
+                        <a href="" class="btn btn-lg btn-outline-dark">ĐĂNG KÝ</a>
+                      </div>
+                      <div class="">
+                        <p>Đăng nhập/ Đăng ký tài khoản để được tích điểm và nhận thêm nhiều ưu đãi từ NgoThao</p>
+                      </div>
+                      <div class="address">
+                        <i class="fa-solid fa-circle-check">   </i>    Địa chỉ</div>
+                      <div class="row form-group">
+                      <div class="col-6 form-group">
+                        <input type="text" name="" id="" class="form-control" placeholder="Họ tên">
+                      </div>
+                      <div class="col-6 form-group">
+                        <input type="text" name="" id="" class="form-control" placeholder="Số điện thoại">
+                      </div>
+                      <div class="col-6 form-group">
+                        <select  class="form-control" name="" id="tinhthanhpho">
+                          <option selected disabled  value="-1">Tỉnh/Thành phố</option>
+                          <option value="507" >Hồ Chí Minh</option>
+                                                                                                    
+                                                                                                    <option value="512" >Hải Phòng</option>
+                                                                                                    <option value="499" >Đà Nẵng</option>
+                                                                                                    <option value="485" >An Giang</option>
+                                                                                                    <option value="486" >Bình Dương</option>
+                                                                                                    <option value="487" >Bắc Giang</option>
+                                                                                                    <option value="488" >Bình Định</option>
+                                                                                                    <option value="489" >Bắc Cạn</option>
+                                                                                                    <option value="490" >Bạc Liêu</option>
+                                                                                                    <option value="491" >Bắc Ninh</option>
+                                                                                                    <option value="492" >Bình Phước</option>
+                                                                                                    <option value="493" >Bà Rịa Vũng Tàu</option>
+                                                                                                    <option value="494" >Bình Thuận</option>
+                                                                                                    <option value="495" >Bến Tre</option>
+                                                                                                    <option value="496" >Cao Bằng</option>
+                                                                                                    <option value="497" >Cà Mau</option>
+                                                                                                    <option value="498" >Cần Thơ</option>
+                                                                                                    <option value="500" selected>Điện Biên</option>
+                                                                                                    <option value="501" >Đắc Lắc</option>
+                                                                                                    <option value="502" >Đồng Nai</option>
+                                                                                                    <option value="503" >Đắc Nông</option>
+                                                                                                    <option value="504" >Đồng Tháp</option>
+                                                                                                    <option value="505" >Gia Lai</option>
+                                                                                                    <option value="506" >Hòa Bình</option>
+                                                                                                    <option value="508" >Hải Dương</option>
+                                                                                                    <option value="509" >Hà Giang</option>
+                                                                                                    <option value="510" >Hà Nam</option>
+                                                                                                    <option value="513" >Hà Tĩnh</option>
+                                                                                                    <option value="514" >Hậu Giang</option>
+                                                                                                    <option value="515" >Hưng Yên</option>
+                                                                                                    <option value="516" >Kiên Giang</option>
+                                                                                                    <option value="517" >Khánh Hòa</option>
+                                                                                                    <option value="518" >Kon Tum</option>
+                                                                                                    <option value="519" >Long An</option>
+                                                                                                    <option value="520" >Lâm Đồng</option>
+                                                                                                    <option value="521" >Lai Châu</option>
+                                                                                                    <option value="522" >Lào Cai</option>
+                                                                                                    <option value="523" >Lạng Sơn</option>
+                                                                                                    <option value="524" >Nghệ An</option>
+                                                                                                    <option value="525" >Ninh Bình</option>
+                                                                                                    <option value="526" >Nam Định</option>
+                                                                                                    <option value="527" >Ninh Thuận</option>
+                                                                                                    <option value="528" >Phú Thọ</option>
+                                                                                                    <option value="529" >Phú Yên</option>
+                                                                                                    <option value="530" >Quảng Bình</option>
+                                                                                                    <option value="531" >Quảng Ngãi</option>
+                                                                                                    <option value="532" >Quảng Nam</option>
+                                                                                                    <option value="533" >Quảng Ninh</option>
+                                                                                                    <option value="534" >Quảng Trị</option>
+                                                                                                    <option value="535" >Sơn La</option>
+                                                                                                    <option value="536" >Sóc Trăng</option>
+                                                                                                    <option value="537" >Thái Bình</option>
+                                                                                                    <option value="538" >Tiền Giang</option>
+                                                                                                    <option value="539" >Thanh Hóa</option>
+                                                                                                    <option value="540" >Tây Ninh</option>
+                                                                                                    <option value="541" >Tuyên Quang</option>
+                                                                                                    <option value="542" >Huế</option>
+                                                                                                    <option value="543" >Trà Vinh</option>
+                                                                                                    <option value="544" >Thái Nguyên</option>
+                                                                                                    <option value="545" >Vĩnh Long</option>
+                                                                                                    <option value="546" >Vĩnh Phúc</option>
+                                                                                                    <option value="547" >Yên Bái</option>
+                        </select>
+                      </div>
+                      <div class="col-6 form-group">
+                        <select name="selQuanhuyen" id="quanhuyen" class="form-control">
+                          <option selected disabled value="-1" >Chọn Quận/Huyện</option>
+                          <option value="">Bình chánh</option>
+                          <option value="">Bình Tân</option>
+                          <option value="">Bình Thạnh</option>
+                          <option value="">Cần Giờ</option>
+                          <option value="">Củ Chi</option>
+                          <option value="">Gò Vấp</option>
+                          <option value="">Hóc môn</option>
+                          <option value="">Nhà Bè</option>
+                          <option value="">Phú Nhuận</option>
+                          <option value="">Quận 1</option>
+                          <option value="">Quận 2</option>
+                          <option value="">Quận 3</option>
+                          <option value="">Quận 4</option>
+                          <option value="">Quận 5</option>
+                          <option value="">Quận 6</option>
+                          <option value="">Quận 7</option>
+                          <option value="">Quận 8</option>
+                          <option value="">Quận 9</option>
+                          <option value="">Quận 10</option>
+                          <option value="">Quận 11</option>
+                          <option value="">Quận 12</option>
+                          <option value="">Thành Phố Thủ Đức</option>
+                         
+                        </select>
+                      </div>
+                      <div class="col-12 form-group">
+                        <select name="selQuanhuyen" id="phuongxa" class="form-control">
+                          <option selected disabled value="-1" >Chọn Phường/Xã</option>
+                          <option value="">1</option>
+                          <option value="">3</option>
+                          <option value="">4</option>
+                          <option value="">5</option>
+                          <option value="">6</option>
+                          <option value="">7</option>
+                          <option value="">8</option>
+                          <option value="">9</option>
+                          <option value="">10</option>
+                          <option value="">11</option>
+                          <option value="">12</option>
+                          <option value="">13</option>
+                          <option value="">14</option>
+                          <option value="">15</option>
+                          <option value="">16</option>
+                          <option value="">17</option>
+                        </select>
+                      </div>
+                     <div class="col-12 form-group">
+                       <input type="text" name="inputdiachi" id="txtpx" placeholder="Địa chỉ" class="form-control">
+                     </div>
+                     
+                     <div class="method-payment">
+                       <div class="title-payment"><h3>Phương thức thanh toán</h3></div>
+                       <div class="list-method">
+                         <div class="title"> Mọi giao dịch đều được bảo mật và mã hóa. Thông tin thẻ tín dụng sẽ không bao giờ được lưu lại.</div>
+                         <input type="radio" name="rd"> Thanh toán bằng thẻ tín dụng <img src="/assets/img/visa.png" alt=""> <br>
+                         <input type="radio" name="rd"> Thanh toán bằng thẻ ATM
+                         <div class="detail-paymentATM" style="font-size: 14px; margin-left: 15px;">Hỗ trợ thanh toán online hơn 38 ngân hàng phổ biến Việt Nam.</div>
+                         <input type="radio" name="rd"> Thanh toán bằng Momo <br>
+                         <input type="radio" name="rd"> Thanh toán khi giao hàngâ
+                       </div>
+                      </div>
+                              <div class="buttons">
+                                <a href="" class="btn btn-dark btn-outline-light">Hiển thị sản phẩm</a>
+                         </div>
+                     </div>
+                </div>
+                <div class="col-5">
+                      <div class="delivery-method">
+                        <h3>Phương thức giao hàng</h3>
+                      </div>
+                      <div class="title-delivery">
+                        <i class="fa-solid fa-circle-check"></i> Chuyển phát nhanh <br>
+                        <span class="delivery-time" style="color: #6c6d70;">Thời gian giao hàng dự kiến:Thứ 7,14/05/2025</span>
+                    </div>
+                  </div>
+              </div>
+            </div>         
+         </div>
+      
+       <div class="col-4">
+       <div class="payment-right">
+          <div class="order_summary">
+            <div class="title_order">
+              <h3>Tóm tắt đơn hàng</h3> 
+
+              <div class="order-summary-item">
+                <p>Tổng tiền hàng</p>
+                <p>590.000đ</p>
+              </div>
+              <div class="order-summary-item">
+                <p>Tạm tính</p>
+                <p>590.000đ</p>
+              </div>
+              <div class="order-summary-item">
+                <p>Phí vận chuyển</p>
+                <p>0đ</p>
+              </div>
+              <div class="order-summary-item">
+                <p>Tiền thanh toán</p>
+                <p><b>590.000</b></p>
+              </div>
+            </div>
+            <div class="dicount-code">
+              <div class="dicount-code-title">
+                <h4 class="active">Mã phiếu giảm giá</h4> <span>|</span>
+                <h4>Mã của tôi</h4>
+              </div>
+            </div>
+            <div class="form-group2">
+              <input type="text" name="magiamgia" id="txtmagiamgia" placeholder="Mã giảm giá" class="form-control">
+              <button type="button" class="btn btn-outline-dark " style="height: 42px; width: 130px;">ÁP DỤNG</button>
+   
+            </div>
+            <div class="form-group2">
+              <input type="text" name="manvht" id="txtmanvht" class="form-control" placeholder="Mã nhân viên hỗ trợ">
+            </div>
+          </div>
+          <div class="form-group2">
+           <button type="button" class="btn btn-lg btn-outline-light btn-dark form-control">HOÀN THÀNH</button>
+          </div>
+       </div>
+
+      </div>
+         </div>
+    </div>
+
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+ 
+</section>
+  
+ 
+    <!-- Button trigger modal -->
+
+    <section id="footer">
+      <div class="site-map">
+        <a href="./sitemap.html"> Site map </a>
+      </div>
+      <div class="container-footer">
+        <div class="container-footer-section1">
+          <div class="grid__row">
+            <div class="grid__column-3">
+              <h3>Đăng kí nhận thông tin</h3>
+              <p>
+                Đăng ký ngay để là người đầu tiên cập nhật sớm nhất những tin
+                tức thời trang, những bộ sưu tập cũng như ưu đãi hấp dẫn từ NT.
+              </p>
+            </div>
+            <div class="grid__column-3">
+              <div class="search-box">
+                <input type="text" placeholder="Nhập email đăng ký" />
+                <button>Tìm</button>
+              </div>
+            </div>
+            <div class="grid__column-3">
+              <h3 class="footer-txt-connect">Kết nối với chúng tôi</h3>
+              <div class="footer-icon">
+                <a href=""><i class="ti-instagram icon-instagram"></i></a>
+                <a href=""><i class="ti-facebook icon-fb"></i></a>
+                <a href=""><i class="ti-youtube icon-ytb"></i></a>
+                <a href=""><i class="ti-twitter-alt icon-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-footer-section2">
+          <div class="grid__row">
+            <div class="grid__column-4">
+              <ul>
+                <li class="nav-footer"><h2>TỔNG ĐÀI GỌI HỖ TRỢ</h2></li>
+                <li class="nav-footer">
+                  <p>
+                    “Đặt sự hài lòng của khách hàng là ưu tiên số 1 trong mọi
+                    suy nghĩ hành động của mình” là sứ mệnh, là triết lý, chiến
+                    lược.. luôn cùng FIONA tiến bước
+                  </p>
+                </li>
+                <li class="nav-footer"><p>Mua hàng: 0981122811</p></li>
+                <li class="nav-footer">
+                  <p>Góp ý, khiếu nại: 0942 844 222</p>
+                </li>
+              </ul>
+            </div>
+            <div class="grid__column-4">
+              <ul>
+                <li class="nav-footer"><h2>Về Chúng Tôi:</h2></li>
+                <li class="nav-footer"><p>Liên hệ:0389757147</p></li>
+                <li class="nav-footer">
+                  <p>Trường Đại Học Công Nghiệp TPHCM</p>
+                </li>
+              </ul>
+            </div>
+            <div class="grid__column-4">
+              <ul>
+                <li class="nav-footer"><h2>Hỗ Trợ Khách Hàng</h2></li>
+                <li class="nav-footer"><p>Hướng dẫn mua hàng</p></li>
+                <li class="nav-footer"><p>Chính sách bảo hành</p></li>
+                <li class="nav-footer"><p>Báo Lỗi!</p></li>
+              </ul>
+            </div>
+            <div class="grid__column-4">
+              <ul>
+                <li class="nav-footer"><h2>Công ty Cổ Phần NT Việt Nam</h2></li>
+                <li class="nav-footer">
+                  <p>
+                    Địa Chỉ:12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, Thành phố Hồ
+                    Chí Minh
+                  </p>
+                </li>
+                <li class="nav-footer"><p>Email:anhngole1105@gmail.com</p></li>
+                <li class="nav-footer"><p>Liên hệ.</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-txt-copy">
+          <p class="">Copyright by Tran Quoc Thai and Tran Van Anh Viet</p>
+        </div>
+      </div>
+    </section>
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal js-modal">
+  <div class="modal-container js-modal-container">
+      <div class="modal-close js-modal-close">
+          <i class="ti-close"></i>
+      </div>
+      <header class="modal-header">
+          <i class="modal-heading-icon ti-bag"></i>
+         Chúc mừng
+      </header>
+      
+      <div class="modal-body">
+         <label for="tickets-email" class="modal-label">
+             <i class="ti-user"></i>
+              Bạn đã đăng ký thành công
+         </label>
+     
+         <a href="/index.html" id="btn-login-ok"> Tiếp tục<i class="ti-check"></i>
+         </a>
+     </div>
+     <footer class="modal-footer">
+         <p class="modal-help">need <a href="">help?</a></p>
+     </footer>
+  </div>
+ </div>
+    <script  src="/registration.js "></script>
+    
+</body>
+</html>

@@ -1,0 +1,134 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;900&display=swap'); */
+* {
+    margin: 0 auto;
+    /* padding: 0; */
+    box-sizing: border-box;
+    /* font-family: 'Spartan', sans-serif; */
+}
+
+:root {
+    --primary-color: #7A5133;
+    --while-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --star-gold-color: #ffce3e;
+    --navbar-height: 35px;
+    --header-height: 140px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height: 46px;
+}
+
+h1 {
+    font-size: 42px;
+    line-height: 48px;
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: 38px;
+    line-height: 36px;
+    color: var(--text-color);
+
+}
+
+h4 {
+    font-size: 20px;
+    color: var(--text-color);
+
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+
+}
+
+.section-p1 {
+    padding: 40px 80px;
+
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+
+}
+
+.grid__column-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 25%;
+}
+
+.grid__column-3 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 33.33333%;
+}
+
+.grid__column-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 50%;
+}
+
+.box-instroduce {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.grid__column-35 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 45%;
+}
+
+.grid__column-65 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 55%;
+}
+
+
+.search-box {
+    display: flex;
+    max-width: 400px;
+    margin: auto;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-box button {
+    background-color: #a06d4f;
+    color: white;
+    border: 1px solid #a06d4f;
+    padding: 8px 16px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
