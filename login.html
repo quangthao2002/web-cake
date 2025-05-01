@@ -45,6 +45,13 @@
       #toast.toast-success {
         background-color: #4bb543;
       }
+      .error-message {
+        color: #ff4d4f;
+        font-size: 0.85rem;
+        margin-top: 4px;
+        display: none;
+        margin-left: 0px;
+      }
     </style>
   </head>
 
@@ -78,31 +85,22 @@
         <div class="form-container sign-up">
           <form id="signUpForm">
             <h1 class="text-xl font-bold">Tạo tài khoản</h1>
-            <input
-              type="text"
-              name="username"
-              placeholder="User name"
-              required
-            />
-            <input
-              type="text"
-              name="fullName"
-              placeholder="Full name"
-              required
-            />
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              required
-            />
-            <input type="email" name="email" placeholder="Email" required />
-            <input
-              type="text"
-              name="phone"
-              placeholder="Phone number"
-              required
-            />
+
+            <input type="text" name="username" placeholder="User name" />
+            <div class="error-message" data-error-for="username"></div>
+
+            <input type="text" name="fullName" placeholder="Full name" />
+            <div class="error-message" data-error-for="fullName"></div>
+
+            <input type="password" name="password" placeholder="Password" />
+            <div class="error-message" data-error-for="password"></div>
+
+            <input type="email" name="email" placeholder="Email" />
+            <div class="error-message" data-error-for="email"></div>
+
+            <input type="text" name="phone" placeholder="Phone number" />
+            <div class="error-message" data-error-for="phone"></div>
+
             <button type="submit">Đăng ký</button>
           </form>
         </div>
@@ -111,18 +109,23 @@
         <div class="form-container sign-in">
           <form id="signInForm">
             <h1 class="text-xl font-bold">Đăng nhập</h1>
+
             <input
               type="text"
               name="username"
               placeholder="User name"
               required
             />
+            <div class="error-message" data-error-for="username"></div>
+
             <input
               type="password"
               name="password"
               placeholder="Password"
               required
             />
+            <div class="error-message" data-error-for="password"></div>
+
             <a href="#">Quên mật khẩu?</a>
             <button type="submit">Đăng nhập</button>
           </form>
@@ -240,6 +243,61 @@
       const signUpBtn = document.getElementById("signUpBtn");
       const signInBtn = document.getElementById("signInBtn");
 
+      const showError = (name, message) => {
+        const errorDiv = document.querySelector(
+          `.error-message[data-error-for="${name}"]`
+        );
+        if (errorDiv) {
+          errorDiv.textContent = message;
+          errorDiv.style.display = "block";
+        }
+      };
+
+      const clearErrors = (form) => {
+        form.querySelectorAll(".error-message").forEach((div) => {
+          div.textContent = "";
+          div.style.display = "none";
+        });
+      };
+
+      const validateForm = (data) => {
+        const errors = {};
+
+        if (!/^[a-zA-Z0-9_]{3,}$/.test(data.username)) {
+          errors.username =
+            "Tên người dùng phải từ 3 ký tự trở lên, không chứa dấu cách.";
+        }
+
+        if (!data.fullName?.trim()) {
+          errors.fullName = "Họ tên không được để trống.";
+        }
+
+        if (!data.password || data.password.length < 6) {
+          errors.password = "Mật khẩu phải có ít nhất 6 ký tự.";
+        }
+
+        if (!/^\S+@\S+\.\S+$/.test(data.email)) {
+          errors.email = "Email không hợp lệ.";
+        }
+
+        if (!/^(0\d{9,10})$/.test(data.phone)) {
+          errors.phone = "Số điện thoại không hợp lệ.";
+        }
+
+        return errors;
+      };
+
+      const showToast = (message, success = true) => {
+        const toast = document.getElementById("toast");
+        toast.textContent = message;
+        toast.className = `toast-show ${
+          success ? "toast-success" : "toast-error"
+        }`;
+        setTimeout(() => {
+          toast.className = "toast-hidden";
+        }, 2500);
+      };
+
       signUpBtn.addEventListener("click", () => {
         container.classList.add("active");
       });
@@ -248,62 +306,60 @@
         container.classList.remove("active");
       });
 
-      signUpBtn.addEventListener("click", () => {
-        container.classList.add("right-panel-active");
-      });
-
-      signInBtn.addEventListener("click", () => {
-        container.classList.remove("right-panel-active");
-      });
-
-      const showToast = (message, success = true) => {
-        const toast = document.getElementById("toast");
-        toast.textContent = message;
-        toast.className = `toast-show ${
-          success ? "toast-success" : "toast-error"
-        }`;
-
-        setTimeout(() => {
-          toast.className = "toast-hidden";
-        }, 2500);
-      };
-
-      // Đăng ký
+      // Xử lý đăng ký
       document
         .getElementById("signUpForm")
         .addEventListener("submit", function (e) {
           e.preventDefault();
-          const data = Object.fromEntries(new FormData(this));
-          let users = JSON.parse(localStorage.getItem("users")) || [];
+          const formData = Object.fromEntries(new FormData(this));
+          clearErrors(this);
 
-          if (users.find((u) => u.username === data.username)) {
-            showToast("Tên người dùng đã tồn tại!", false);
+          const errors = validateForm(formData);
+          if (Object.keys(errors).length > 0) {
+            Object.entries(errors).forEach(([field, message]) =>
+              showError(field, message)
+            );
             return;
           }
 
-          users.push(data);
+          let users = JSON.parse(localStorage.getItem("users")) || [];
+          if (users.find((u) => u.username === formData.username)) {
+            showError("username", "Tên người dùng đã tồn tại.");
+            return;
+          }
+
+          users.push(formData);
           localStorage.setItem("users", JSON.stringify(users));
+
           showToast("Đăng ký thành công!");
           container.classList.remove("right-panel-active");
+          this.reset();
         });
 
-      // Đăng nhập
+      // Xử lý đăng nhập
       document
         .getElementById("signInForm")
         .addEventListener("submit", function (e) {
           e.preventDefault();
-          const { username, password } = Object.fromEntries(new FormData(this));
-          let users = JSON.parse(localStorage.getItem("users")) || [];
+          const formData = Object.fromEntries(new FormData(this));
+          clearErrors(this);
+
+          const users = JSON.parse(localStorage.getItem("users")) || [];
           const user = users.find(
-            (u) => u.username === username && u.password === password
+            (u) =>
+              u.username === formData.username &&
+              u.password === formData.password
           );
 
-          if (user) {
-            showToast("Đăng nhập thành công!");
-            window.location.href = "listProduct.html";
-          } else {
-            showToast("Sai tên đăng nhập hoặc mật khẩu!", false);
+          if (!user) {
+            showError("username", "Sai tên đăng nhập hoặc mật khẩu.");
+            showError("password", " "); // để hiển thị ô mật khẩu có lỗi
+            showToast("Đăng nhập thất bại!", false);
+            return;
           }
+
+          showToast("Đăng nhập thành công!");
+          window.location.href = "listProduct.html"; // chuyển trang nếu thành công
         });
     </script>
   </body>
