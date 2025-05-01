@@ -146,7 +146,7 @@ products.forEach((product, index) => {
 const renderProduct = function (product) {
   return `
    <div class="container-product">
-      <a href="/listProduct.html" class="back-button">
+      <a href="listProduct.html" class="back-button">
   <i class="ti-angle-left"></i> Quay lại
 </a>
        <br>
