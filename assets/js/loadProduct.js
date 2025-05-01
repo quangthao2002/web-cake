@@ -3,82 +3,82 @@
 //Load product
 const listProduct = [
   {
-    img: "/assets/img/banh1.jpg",
+    img: "./assets/img/banh1.jpg",
     title: "Bánh kem socola tình yêu",
     price: "180.000đ",
   },
   {
-    img: "/assets/img/banh2.jpg",
+    img: "./assets/img/banh2.jpg",
     title: "Bánh mousse dâu tây",
     price: "145.000đ",
   },
   {
-    img: "/assets/img/banh3.jpg",
+    img: "./assets/img/banh3.jpg",
     title: "Tiramisu truyền thống Ý",
     price: "165.000đ",
   },
   {
-    img: "/assets/img/banh4.jpg",
+    img: "./assets/img/banh4.jpg",
     title: "Bánh red velvet kem phô mai",
     price: "195.000đ",
   },
   {
-    img: "/assets/img/banh5.jpg",
+    img: "./assets/img/banh5.jpg",
     title: "Bánh matcha đậu đỏ Nhật Bản",
     price: "170.000đ",
   },
   {
-    img: "/assets/img/banh6.jpg",
+    img: "./assets/img/banh6.jpg",
     title: "Bánh su kem mini hộp 10 cái",
     price: "80.000đ",
   },
   {
-    img: "/assets/img/banh7.jpg",
+    img: "./assets/img/banh7.jpg",
     title: "Bánh quy bơ hạnh nhân giòn thơm",
     price: "60.000đ",
   },
   {
-    img: "/assets/img/banh8.jpg",
+    img: "./assets/img/banh8.jpg",
     title: "Bánh chanh dây mát lạnh",
     price: "120.000đ",
   },
   {
-    img: "/assets/img/banh9.jpg",
+    img: "./assets/img/banh9.jpg",
     title: "Bánh cupcake mix vị 6 cái",
     price: "100.000đ",
   },
   {
-    img: "/assets/img/banh10.jpg",
+    img: "./assets/img/banh10.jpg",
     title: "Bánh flan trứng caramel mịn béo",
     price: "40.000đ",
   },
   {
-    img: "/assets/img/banh11.jpg",
+    img: "./assets/img/banh11.jpg",
     title: "Bánh crepe sầu riêng lớp mỏng",
     price: "140.000đ",
   },
   {
-    img: "/assets/img/banh12.jpg",
+    img: "./assets/img/banh12.jpg",
     title: "Bánh bông lan trứng muối hộp nhỏ",
     price: "95.000đ",
   },
   {
-    img: "/assets/img/banh13.jpg",
+    img: "./assets/img/banh13.jpg",
     title: "Bánh cheese tart Nhật Bản",
     price: "110.000đ",
   },
   {
-    img: "/assets/img/banh14.jpg",
+    img: "./assets/img/banh14.jpg",
     title: "Bánh opera nhiều lớp đậm vị cafe",
     price: "155.000đ",
   },
   {
-    img: "/assets/img/banh15.jpg",
+    img: "./assets/img/banh15.jpg",
     title: "Bánh ngàn lớp kem custard",
     price: "135.000đ",
   },
   {
-    img: "/assets/img/banh16.jpg",
+    img: "./assets/img/banh16.jpg",
     title: "Bánh bắp thơm mềm phủ kem tươi",
     price: "125.000đ",
   },
