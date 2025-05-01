@@ -30,7 +30,7 @@ const CheckUserExist = function () {
   console.log("Sai");
   modal.classList.add("open");
   modalHeader.textContent = `Thất bại`;
-  btnLogin.href = "/registration.html";
+  btnLogin.href = "registration.html";
   modalLabel.textContent = `Người dùng không tồn tại. Vui lòng đăng kí!`;
   return false;
 };
